@@ -7,20 +7,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="uappkasir.EditBarangController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappkasir.EditBarangController">
    <children>
-      <TableView fx:id="tableBarang" layoutX="24.0" layoutY="151.0" prefHeight="434.0" prefWidth="752.0">
+      <TableView fx:id="tableBarang" layoutX="24.0" layoutY="151.0" prefHeight="434.0" prefWidth="907.0">
         <columns>
-          <TableColumn fx:id="namaCol" prefWidth="146.4000244140625" text="Nama" />
-          <TableColumn fx:id="hargaCol" prefWidth="113.5999755859375" text="Harga" />
-            <TableColumn fx:id="jumlahCol" prefWidth="103.99993896484375" text="Jumlah" />
-            <TableColumn fx:id="diskonCol" prefWidth="100.79998779296875" text="Diskon" />
-            <TableColumn fx:id="barCol" prefWidth="111.99993896484375" text="Barcode" />
-            <TableColumn fx:id="expCol" prefWidth="180.00006103515625" text="Expired" />
+          <TableColumn fx:id="namaCol" prefWidth="104.80001831054688" text="Nama" />
+          <TableColumn fx:id="hargaCol" prefWidth="104.80001831054688" text="Harga" />
+            <TableColumn fx:id="jumlahCol" prefWidth="95.99992370605469" text="Jumlah" />
+            <TableColumn fx:id="diskonCol" prefWidth="96.800048828125" text="Diskon" />
+            <TableColumn fx:id="barCol" minWidth="0.0" prefWidth="128.0" text="Barcode" />
+            <TableColumn fx:id="expCol" minWidth="0.0" prefWidth="178.4000244140625" text="Expired" />
+            <TableColumn fx:id="kategoriCol" prefWidth="243.20001220703125" text="Kategori" />
         </columns>
       </TableView>
-      <Pane layoutY="81.0" prefHeight="9.0" prefWidth="800.0" style="-fx-background-color: black;" />
+      <Pane layoutY="83.0" prefHeight="8.0" prefWidth="956.0" style="-fx-background-color: black;" />
       <FontAwesomeIconView glyphName="PLUS" layoutX="24.0" layoutY="139.0" onMouseClicked="#getAdd" size="30.0" />
       <FontAwesomeIconView glyphName="REFRESH" layoutX="61.0" layoutY="139.0" onMouseClicked="#getRefresh" size="30.0" />
       <Button fx:id="btnBck" layoutX="730.0" layoutY="115.0" mnemonicParsing="false" onAction="#sendBck" text="BACK" />

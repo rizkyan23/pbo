@@ -39,7 +39,7 @@ public class PembelianController {
       
         Stage stage = (Stage) btnMkn.getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.setTitle("Cashier Machine");
+        stage.setTitle("Menu Barang");
     }
 
     @FXML
@@ -50,7 +50,7 @@ public class PembelianController {
       
         Stage stage = (Stage) btnMkn.getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.setTitle("Cashier Machine");
+        stage.setTitle("Menu Makanan");
     }
 
 }

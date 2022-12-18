@@ -14,13 +14,17 @@ public class HomeController {
  
 
     @FXML
-    private Button btnList;
+    private Button btnKtgr;
 
     @FXML
-    private Button btnPembelian;
+    private Button btnProduk;
 
     @FXML
     private Button btnEdit;
+    
+    @FXML
+    private Button btnPenjualan;
+
 
     
 
@@ -30,14 +34,20 @@ public class HomeController {
         Parent root = loader.load();
         
       
-        Stage stage = (Stage) btnPembelian.getScene().getWindow();
+        Stage stage = (Stage) btnProduk.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.setTitle("Pembelian");
     }
 
     @FXML
-    void sendList(ActionEvent event) {
-
+    void sendKategori(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("kategori.fxml"));
+        Parent root = loader.load();
+        
+      
+        Stage stage = (Stage) btnKtgr.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Kategori");
     }
 
     @FXML
@@ -49,6 +59,17 @@ public class HomeController {
         Stage stage = (Stage) btnEdit.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.setTitle("Edit Produk");
+    }
+    
+    @FXML
+    void sendPembelian(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Penjualan.fxml"));
+        Parent root = loader.load();
+        
+      
+        Stage stage = (Stage) btnPenjualan.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Penjualan");
     }
 
 }

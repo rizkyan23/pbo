@@ -3,36 +3,46 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="ipad" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="uappkasir.AddBarangController">
+<AnchorPane id="ipad" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappkasir.AddBarangController">
    <children>
-      <Text layoutX="262.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Barang" />
-      <TextField fx:id="NaBrg" layoutX="192.0" layoutY="50.0" prefHeight="40.0" prefWidth="348.0" />
-      <Text layoutX="64.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Barang">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
-      <Text layoutX="75.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Harga" />
-      <TextField fx:id="hrgBrg" layoutX="192.0" layoutY="105.0" prefHeight="40.0" prefWidth="348.0" />
-      <Text layoutX="70.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jumlah" />
-      <TextField fx:id="JmlBrg" layoutX="192.0" layoutY="156.0" prefHeight="40.0" prefWidth="342.0" />
-      <Text layoutX="72.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diskon" />
-      <TextField fx:id="DiscBrg" layoutX="192.0" layoutY="215.0" prefHeight="40.0" prefWidth="342.0" />
-      <Text layoutX="67.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barcode" />
-      <TextField fx:id="BrcdBrg" layoutX="192.0" layoutY="265.0" prefHeight="40.0" prefWidth="348.0" />
-      <Text layoutX="69.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expired" />
-      <TextField fx:id="ExpBrg" layoutX="192.0" layoutY="315.0" prefHeight="40.0" prefWidth="348.0" />
-      <Button fx:id="AddBtn" layoutX="540.0" layoutY="375.0" mnemonicParsing="false" onAction="#AddBarang" text="Add" />
-      <Button fx:id="ClnBtn" layoutX="437.0" layoutY="375.0" mnemonicParsing="false" onAction="#CleanBarang" text="Clean" />
+      <Pane layoutX="36.0" layoutY="13.0" prefHeight="382.0" prefWidth="154.0">
+         <children>
+            <Text layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Barang">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Harga" />
+            <Text layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jumlah" />
+            <Text layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diskon" />
+            <Text layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barcode" />
+            <Text layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expired" />
+            <Text layoutX="-1.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategori" />
+         </children>
+      </Pane>
+      <Text layoutX="263.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tambah Barang" />
+      <Pane layoutX="188.0" layoutY="48.0" prefHeight="354.0" prefWidth="355.0">
+         <children>
+            <TextField fx:id="NaBrg" layoutY="3.0" prefHeight="40.0" prefWidth="348.0" />
+            <TextField fx:id="hrgBrg" layoutY="53.0" prefHeight="40.0" prefWidth="348.0" />
+            <TextField fx:id="JmlBrg" layoutY="103.0" prefHeight="40.0" prefWidth="348.0" />
+            <TextField fx:id="DiscBrg" layoutY="153.0" prefHeight="40.0" prefWidth="348.0" />
+            <TextField fx:id="BrcdBrg" layoutY="203.0" prefHeight="40.0" prefWidth="348.0" />
+            <TextField fx:id="ExpBrg" layoutY="253.0" prefHeight="40.0" prefWidth="348.0" />
+            <TextField fx:id="kategoriBrg" layoutY="300.0" prefHeight="40.0" prefWidth="348.0" />
+         </children>
+      </Pane>
+      <Button fx:id="AddBtn" layoutX="585.0" layoutY="415.0" mnemonicParsing="false" onAction="#AddBarang" text="Add" />
+      <Button fx:id="ClnBtn" layoutX="487.0" layoutY="415.0" mnemonicParsing="false" onAction="#CleanBarang" text="Clean" />
       <Text fx:id="TXT" layoutX="192.0" layoutY="414.0" strokeType="OUTSIDE" strokeWidth="0.0">
          <font>
             <Font size="11.0" />
          </font>
       </Text>
-      <Button fx:id="CncelBtn" layoutX="46.0" layoutY="375.0" mnemonicParsing="false" onAction="#CancelBarang" text="Cancel" />
+      <Button fx:id="CncelBtn" layoutX="14.0" layoutY="415.0" mnemonicParsing="false" onAction="#CancelBarang" text="Cancel" />
    </children>
 </AnchorPane>

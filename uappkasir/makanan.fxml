@@ -5,15 +5,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="ipad" prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappkasir.MakananController">
+<AnchorPane id="ipad" prefHeight="300.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappkasir.MakananController">
    <children>
-      <Text layoutX="261.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DAFTAR KATEGORI MAKANAN">
+      <Text layoutX="244.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DAFTAR KATEGORI MAKANAN">
          <font>
             <Font size="26.0" />
          </font></Text>
       <Button fx:id="cncLbl" layoutX="50.0" layoutY="532.0" mnemonicParsing="false" onAction="#CncelA" text="Back" />
-      <Button id="ipad" fx:id="BtnSf" layoutX="330.0" layoutY="146.0" mnemonicParsing="false" onAction="#SF" prefHeight="58.0" prefWidth="182.0" stylesheets="@stylesheet.css" text="StreetFood" />
-      <Button id="ipad" fx:id="BtnJf" layoutX="331.0" layoutY="250.0" mnemonicParsing="false" onAction="#JF" stylesheets="@stylesheet.css" text="JapaneseFood" />
-      <Button id="ipad" fx:id="BtnJfd" layoutX="330.0" layoutY="348.0" mnemonicParsing="false" onAction="#JFD" prefHeight="58.0" prefWidth="181.0" stylesheets="@stylesheet.css" text="JunkFood" />
+      <Button id="ipad" fx:id="BtnSf" layoutX="308.0" layoutY="106.0" mnemonicParsing="false" onAction="#SF" prefHeight="58.0" prefWidth="182.0" stylesheets="@stylesheet.css" text="StreetFood" />
+      <Button id="ipad" fx:id="BtnJf" layoutX="309.0" layoutY="227.0" mnemonicParsing="false" onAction="#JF" stylesheets="@stylesheet.css" text="JapaneseFood" />
+      <Button id="ipad" fx:id="BtnJfd" layoutX="308.0" layoutY="347.0" mnemonicParsing="false" onAction="#JFD" prefHeight="58.0" prefWidth="181.0" stylesheets="@stylesheet.css" text="JunkFood" />
    </children>
 </AnchorPane>

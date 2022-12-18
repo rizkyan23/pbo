@@ -24,68 +24,63 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
-public class EditBarangController implements Initializable{
-    
+public class KategoriController implements Initializable{
+
     String query = null;
     Connection connection = null;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     Barang barang = null;
-
-    @FXML
-    private TableColumn<Barang, String> barCol;
-
-    @FXML
-    private Button btnBck;
-
-    @FXML
-    private TableColumn<Barang, Double> diskonCol;
-
-    @FXML
-    private TableColumn<Barang, String> expCol;
-
-    @FXML
-    private TableColumn<Barang, Double> hargaCol;
     
     @FXML
-    private TableColumn<Barang, String> kategoriCol;
+    private Button btnBack;
 
     @FXML
-    private TableColumn<Barang, Integer> jumlahCol;
+    private TableColumn<Barang, String> kategoriCol;
 
     @FXML
     private TableColumn<Barang, String> namaCol;
 
     @FXML
-    private TableView<Barang> tableBarang;
-    
-    ObservableList<Barang> BarangList = FXCollections.observableArrayList();
-    @Override
-    public void initialize (URL url, ResourceBundle rb){
-        
-        loadDate();
-    }
+    private TableView<Barang> tableKategori;
 
     @FXML
     void getAdd(MouseEvent event) {
-        try {
-            Parent parent = FXMLLoader.load(getClass().getResource("AddBarang.fxml"));
-            Scene scene = new Scene(parent);
-            Stage stage = new Stage();
-            
-            stage.setScene(scene);
-            stage.initStyle(StageStyle.UTILITY);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(EditMakananController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
     }
 
     @FXML
     void getRefresh(MouseEvent event) {
         refreshTable();
+    }
+
+    @FXML
+    void sendBack(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+        Parent root = loader.load();
+        
+      
+        Stage stage = (Stage) btnBack.getScene().getWindow();
+        stage.setScene(new Scene(root));
+        stage.setTitle("Cashier Machine");
+    }
+    
+    private void loadDate() {
+        
+        connection = DBHelper.getConnection();
+        refreshTable();
+        
+        namaCol.setCellValueFactory(new PropertyValueFactory<>("nama_produk"));
+        kategoriCol.setCellValueFactory(new PropertyValueFactory<>("kategori"));
+    }
+    
+    ObservableList<Barang> BarangList = FXCollections.observableArrayList();
+    
+    @Override
+    public void initialize (URL url, ResourceBundle rb){
+        
+        loadDate();
     }
     
     private void refreshTable(){
@@ -105,7 +100,7 @@ public class EditBarangController implements Initializable{
                         resultSet.getString("barcode"),
                         resultSet.getString("expired"),
                         resultSet.getString("kategori")));
-                tableBarang.setItems(BarangList);
+                tableKategori.setItems(BarangList);
                 
             }
             
@@ -117,30 +112,5 @@ public class EditBarangController implements Initializable{
         
         
      }
-    
-    private void loadDate() {
-        
-        connection = DBHelper.getConnection();
-        refreshTable();
-        
-        namaCol.setCellValueFactory(new PropertyValueFactory<>("nama_produk"));
-        hargaCol.setCellValueFactory(new PropertyValueFactory<>("harga"));
-        jumlahCol.setCellValueFactory(new PropertyValueFactory<>("jumlah"));
-        diskonCol.setCellValueFactory(new PropertyValueFactory<>("diskon"));
-        barCol.setCellValueFactory(new PropertyValueFactory<>("barcode"));
-        expCol.setCellValueFactory(new PropertyValueFactory<>("expired"));
-        kategoriCol.setCellValueFactory(new PropertyValueFactory<>("kategori"));
-    }
-
-    @FXML
-    void sendBck(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("EditProduk.fxml"));
-        Parent root = loader.load();
-        
-      
-        Stage stage = (Stage) btnBck.getScene().getWindow();
-        stage.setScene(new Scene(root));
-        stage.setTitle("Edit Produk");
-    }
 
 }

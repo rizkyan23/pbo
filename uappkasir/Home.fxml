@@ -7,13 +7,14 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappkasir.HomeController">
    <children>
-      <Button id="ipad" fx:id="btnPembelian" layoutX="290.0" layoutY="168.0" mnemonicParsing="false" onAction="#sendData" prefHeight="58.0" prefWidth="219.0" stylesheets="@stylesheet.css" text="PEMBELIAN" />
-      <Button id="ipad" fx:id="btnList" layoutX="290.0" layoutY="241.0" mnemonicParsing="false" onAction="#sendList" prefHeight="58.0" prefWidth="219.0" stylesheets="@stylesheet.css" text="LIST PRODUK" />
+      <Button id="ipad" fx:id="btnProduk" layoutX="290.0" layoutY="168.0" mnemonicParsing="false" onAction="#sendData" prefHeight="58.0" prefWidth="219.0" stylesheets="@stylesheet.css" text="PRODUK" />
+      <Button id="ipad" fx:id="btnKtgr" layoutX="290.0" layoutY="241.0" mnemonicParsing="false" onAction="#sendKategori" prefHeight="58.0" prefWidth="219.0" stylesheets="@stylesheet.css" text="KATEGORI" />
       <Button id="ipad" fx:id="btnEdit" layoutX="290.0" layoutY="315.0" mnemonicParsing="false" onAction="#sendEdit" prefHeight="58.0" prefWidth="219.0" stylesheets="@stylesheet.css" text="EDIT PRODUK" />
       <Label alignment="CENTER" layoutX="303.0" layoutY="82.0" text="MESIN KASIR" textAlignment="CENTER" textFill="#181717">
          <font>
             <Font name="Cambria Bold" size="32.0" />
          </font>
       </Label>
+      <Button id="ipad" fx:id="btnPenjualan" layoutX="290.0" layoutY="387.0" mnemonicParsing="false" onAction="#sendPembelian" prefHeight="58.0" prefWidth="219.0" stylesheets="@stylesheet.css" text="PENJUALAN" />
    </children>
 </AnchorPane>

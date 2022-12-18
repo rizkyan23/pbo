@@ -50,6 +50,9 @@ public class AddBarangController implements Initializable {
 
     @FXML
     private TextField NaBrg;
+    
+   @FXML
+    private TextField kategoriBrg;
 
     @FXML
     private TextField hrgBrg;
@@ -65,7 +68,7 @@ public class AddBarangController implements Initializable {
         double diskon=Double.parseDouble(DiscBrg.getText());
     
     
-        Barang brg1= new Barang(NaBrg.getText(),harga, jumlah,diskon,BrcdBrg.getText(),ExpBrg.getText());
+        Barang brg1= new Barang(NaBrg.getText(),harga, jumlah,diskon,BrcdBrg.getText(),ExpBrg.getText(),kategoriBrg.getText());
         
         mkn.addBarang(brg1);
         
@@ -81,7 +84,7 @@ public class AddBarangController implements Initializable {
         double diskon=Double.parseDouble(DiscBrg.getText());
     
     
-        Barang brg1= new Barang(NaBrg.getText(),harga, jumlah,diskon,BrcdBrg.getText(),ExpBrg.getText());
+        Barang brg1= new Barang(NaBrg.getText(),harga, jumlah,diskon,BrcdBrg.getText(),ExpBrg.getText(),kategoriBrg.getText());
         
         mkn.hapusBarang(brg1);
         
@@ -118,6 +121,7 @@ public class AddBarangController implements Initializable {
     DiscBrg.clear();
     BrcdBrg.clear();
     ExpBrg.clear();
+    kategoriBrg.clear();
     }
     
 }

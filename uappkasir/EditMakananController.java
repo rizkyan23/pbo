@@ -138,7 +138,7 @@ public class EditMakananController implements Initializable{
       
         Stage stage = (Stage) BtnBck.getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.setTitle("Cashier Machine");
+        stage.setTitle("Edit Produk");
     }
             }
     

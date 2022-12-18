@@ -5,15 +5,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="ipad" prefHeight="400.0" prefWidth="600.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappkasir.MenuBarangController">
+<AnchorPane id="ipad" prefHeight="600.0" prefWidth="800.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uappkasir.MenuBarangController">
    <children>
-      <Text layoutX="169.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Kategori Barang">
+      <Text layoutX="247.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daftar Kategori Barang">
          <font>
             <Font name="System Bold" size="28.0" />
          </font></Text>
-      <Button fx:id="btnBack" layoutX="52.0" layoutY="345.0" mnemonicParsing="false" onAction="#Back" text="Back" />
-      <Button id="ipad" fx:id="BtnElk" layoutX="205.0" layoutY="84.0" mnemonicParsing="false" onAction="#ElekNext" prefHeight="58.0" prefWidth="234.0" stylesheets="@stylesheet.css" text="Barang Elektronik" />
-      <Button id="ipad" fx:id="BtnInt" layoutX="204.0" layoutY="170.0" mnemonicParsing="false" onAction="#IntNext" prefHeight="58.0" prefWidth="234.0" stylesheets="@stylesheet.css" text="Barang Interior" />
-      <Button id="ipad" fx:id="BtnDpr" layoutX="205.0" layoutY="258.0" mnemonicParsing="false" onAction="#DprNext" prefHeight="58.0" prefWidth="234.0" stylesheets="@stylesheet.css" text="Barang Dapur" />
+      <Button fx:id="btnBack" layoutX="26.0" layoutY="534.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+      <Button id="ipad" fx:id="BtnElk" layoutX="282.0" layoutY="101.0" mnemonicParsing="false" onAction="#ElekNext" prefHeight="58.0" prefWidth="234.0" stylesheets="@stylesheet.css" text="Barang Elektronik" />
+      <Button id="ipad" fx:id="BtnInt" layoutX="283.0" layoutY="216.0" mnemonicParsing="false" onAction="#IntNext" prefHeight="58.0" prefWidth="234.0" stylesheets="@stylesheet.css" text="Barang Interior" />
+      <Button id="ipad" fx:id="BtnDpr" layoutX="283.0" layoutY="341.0" mnemonicParsing="false" onAction="#DprNext" prefHeight="58.0" prefWidth="234.0" stylesheets="@stylesheet.css" text="Barang Dapur" />
    </children>
 </AnchorPane>

@@ -11,15 +11,25 @@ import java.util.ArrayList;
 public class Barang extends Produk{
     private String barcode;
     private String expired;
+    private String kategori;
     private ArrayList<Kategori> produk;
 
-    public Barang(String nama_produk, double harga, int jumlah, double diskon, String barcode, String expired) {
+    public Barang(String nama_produk, double harga, int jumlah, double diskon, String barcode, String expired, String kategori) {
         super(nama_produk, harga, jumlah, diskon);
         this.barcode = barcode;
         this.expired = expired;
         this.produk = produk;
+        this.kategori = kategori;
     }
-
+   
+    public void setKategori(String kategori){
+        this.kategori = kategori;
+    }
+    
+    public String getKategori(){
+        return kategori;
+    }
+    
     public void addKategori(Kategori kategori){
         produk.add(kategori);
     }

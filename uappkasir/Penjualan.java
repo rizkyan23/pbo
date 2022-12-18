@@ -11,11 +11,13 @@ public class Penjualan implements ProductCounter{
     private ArrayList<Produk> listProduk;
     private int jumlahProduk;
     private int stok;
+    private int harga;
 
-    public Penjualan(ArrayList<Produk> listProduk, int jumlahProduk, int stok) {
+    public Penjualan( int jumlahProduk,int harga, int stok) {
         this.listProduk = new ArrayList<>();
         this.jumlahProduk = jumlahProduk;
         this.stok = stok;
+        this.harga=harga;
     }
 
     @Override
@@ -55,5 +57,15 @@ public class Penjualan implements ProductCounter{
     public void setStok(int stok) {
         this.stok = stok;
     }
+
+    public int getHarga() {
+        return harga;
+    }
+
+    public void setHarga(int harga) {
+        this.harga = harga;
+    }
+    
+    
 }
 
